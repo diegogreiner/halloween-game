@@ -31,7 +31,7 @@ export default function ScreenGame() {
         }
       })
     }
-  }, [KeyboardEvent, ctx.cactoVerifyLost, ctx.characterBruxaLost, ctx.characterZumbiLost])
+  }, [KeyboardEvent, ctx.cactoVerifyLost, ctx.characterBruxaLost, ctx.characterZumbiLost, ctx])
 
 
   return (

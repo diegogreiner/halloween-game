@@ -24,7 +24,7 @@ export default function ContainerCacto() {
         clearInterval(intervalVerify);
       }
     }
-  }, [cactoRef.current])
+  }, [cactoRef.current, ctx])
 
 
   return (

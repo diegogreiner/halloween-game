@@ -23,7 +23,7 @@ export default function ContainerZumbi() {
     return () => {
       clearInterval(intervalVerify);
     }
-  }, [zumbiRef.current])
+  }, [zumbiRef.current, ctx])
 
   return (
     <>

@@ -22,7 +22,7 @@ export default function ContainerBruxa() {
     return () => {
       clearInterval(intervalVerify);
     }
-  }, [bruxaRef.current])
+  }, [bruxaRef.current, ctx])
 
   return (
     <>
