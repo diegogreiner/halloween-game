@@ -13,7 +13,7 @@ export default function ContainerCacto() {
       const intervalVerify = setInterval(() => {
         if (cactoRef.current && cactoRef.current.offsetLeft >= 233) {
           ctx.setCactoVerifyLost(false);
-        } else if (cactoRef.current && cactoRef.current.offsetLeft <= 200) {
+        } else if (cactoRef.current && cactoRef.current.offsetLeft <= 180) {
           ctx.setCactoVerifyLost(false);
         } else {
           ctx.setCactoVerifyLost(true);
@@ -24,7 +24,7 @@ export default function ContainerCacto() {
         clearInterval(intervalVerify);
       }
     }
-  }, [cactoRef.current, ctx])
+  }, [ctx])
 
 
   return (

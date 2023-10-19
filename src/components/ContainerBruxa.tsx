@@ -22,14 +22,14 @@ export default function ContainerBruxa() {
     return () => {
       clearInterval(intervalVerify);
     }
-  }, [bruxaRef.current, ctx])
+  }, [ctx])
 
   return (
     <>
       {
         ctx.up ?
           <CharacterBruxaAnimated>
-            <Image src={bruxaGif} alt="Bruxa" width={180} height={150} priority ref={bruxaRef} />
+            {!ctx.modalOpen && <Image src={bruxaGif} alt="Bruxa" width={180} height={150} priority ref={bruxaRef} />}
           </CharacterBruxaAnimated>
         :
           <CharacterBruxa>

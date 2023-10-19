@@ -23,14 +23,14 @@ export default function ContainerZumbi() {
     return () => {
       clearInterval(intervalVerify);
     }
-  }, [zumbiRef.current, ctx])
+  }, [ctx])
 
   return (
     <>
       {
         ctx.up ?
           <CharacterZumbiAnimated>
-            <Image src={zumbiGif} alt="Zumbi" width={150} height={180} priority ref={zumbiRef} />
+            {!ctx.modalOpen && <Image src={zumbiGif} alt="Zumbi" width={150} height={180} priority ref={zumbiRef} />}
           </CharacterZumbiAnimated>
           :
           <CharacterZumbi>

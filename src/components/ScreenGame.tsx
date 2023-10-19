@@ -11,17 +11,18 @@ import ContainerNuvem from './ContainerNuvem'
 export default function ScreenGame() {
   const ctx = useContext(Context)
 
+  const charactersAtual = ctx.characters === 'bruxa' ? ctx.characterBruxaLost : ctx.characterZumbiLost
+
   useEffect(() => {
-    const charactersAtual = ctx.characters === 'bruxa' ? ctx.characterBruxaLost : ctx.characterZumbiLost
-    console.log('cacto: ' + ctx.cactoVerifyLost)
-    console.log('zumbi: ' + ctx.characterZumbiLost)
-    console.log('bruxa: ' + ctx.characterBruxaLost)
     if (ctx.cactoVerifyLost && charactersAtual && !ctx.modalOpen) {
       ctx.setModalOpen(true)
-    } else if (ctx.cactoVerifyLost && !charactersAtual && !ctx.modalOpen) {
-      ctx.setPoints(ctx.points + 10)   
     }
-    if(ctx.modalOpen === false) {
+    if (ctx.cactoVerifyLost && !charactersAtual && !ctx.modalOpen) {
+      setTimeout(() => {
+        ctx.setPoints(ctx.points + 10)
+      }, 500);
+    }
+    if (!ctx.modalOpen) {
       document.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === 'ArrowUp') {
           ctx.setUp(true)
@@ -31,8 +32,7 @@ export default function ScreenGame() {
         }
       })
     }
-  }, [KeyboardEvent, ctx.cactoVerifyLost, ctx.characterBruxaLost, ctx.characterZumbiLost, ctx])
-
+  }, [charactersAtual, ctx])
 
   return (
     <>
