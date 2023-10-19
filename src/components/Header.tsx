@@ -3,7 +3,6 @@ import Logo from '../assets/images/pumpkin.png'
 import Image from 'next/image'
 import { Container, HeaderContainer } from '@/styles/Header'
 
-
 export default function Header() {
   return (
     <HeaderContainer>
