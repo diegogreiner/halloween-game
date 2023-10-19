@@ -1,3 +1,13 @@
+# Halloween Game
+
+# Sobre o Jogo:
+
+- O Hallowen Game é uma experiência simples e divertida que permite aos jogadores escolher entre dois personagens icônicos: uma bruxa ou um zumbi. O objetivo é desviar dos cactos que surgem no caminho, e a cada salto bem-sucedido, o jogador acumula 10 pontos. Este jogo foi desenvolvido utilizando tecnologias modernas, incluindo Next.js, Styled-Components e a API de contexto.
+
+- O jogo oferece uma experiência completa, começando com uma tela inicial onde os jogadores podem escolher seu personagem. Após a escolha, eles são levados para a emocionante tela de jogo. Quando um jogador perde, há a opção de reiniciar o jogo com o mesmo personagem ou retornar ao menu inicial para fazer uma nova escolha.
+
+- Prepare-se para uma aventura assustadoramente divertida no Jogo de Halloween!
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
