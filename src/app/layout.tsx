@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'Halloween Game',
 }
 
-
 export default function RootLayout({
   children,
 }: {
